@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_world/basic_widgets/date_time_pickers_widget.dart';
+import 'package:hello_world/basic_widgets/dialog_widget.dart';
+import 'package:hello_world/basic_widgets/image_widget.dart';
 import 'package:hello_world/basic_widgets/input_selection_widget.dart';
 // import 'package:hello_world/basic_widgets/fab_widget.dart';
 // import 'package:hello_world/basic_widgets/image_widget.dart';
@@ -7,7 +9,7 @@ import 'package:hello_world/basic_widgets/input_selection_widget.dart';
 // import 'package:hello_world/basic_widgets/text_widget.dart';
 
 void main() {
-  runApp(const MyDateTimePickers());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(title: 'My Increment App'),
+      home: const MyHomePage(title: 'Tugas Praktikum'),
     );
   }
 }
@@ -54,8 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const MyDateTimePickers(
-            ),
+            const MyImageWidget(),
+            const MyInputSelectionWidget(),
+            const MyDateTimePickers(),
+            const MyDialogWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
