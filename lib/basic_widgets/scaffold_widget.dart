@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/basic_widgets/date_time_pickers_widget.dart';
-import 'package:hello_world/basic_widgets/input_selection_widget.dart';
-// import 'package:hello_world/basic_widgets/fab_widget.dart';
-// import 'package:hello_world/basic_widgets/image_widget.dart';
-// import 'package:hello_world/basic_widgets/loading_cupertino.dart';
-// import 'package:hello_world/basic_widgets/text_widget.dart';
 
-void main() {
-  runApp(const MyDateTimePickers());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyScaffoldWidget extends StatelessWidget {
+  const MyScaffoldWidget({super.key});
 
   // This widget is the root of your application.
   @override
@@ -27,7 +17,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -54,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const MyDateTimePickers(
+            const Text(
+              'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
@@ -72,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment Counter',
         child: const Icon(Icons.add),
-      ), 
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
